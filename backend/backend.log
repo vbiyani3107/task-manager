@@ -1,0 +1,76 @@
+[INFO] Scanning for projects...
+[WARNING] The requested profile "karate" could not be activated because it does not exist.
+[WARNING] The requested profile "pfw" could not be activated because it does not exist.
+[INFO] 
+[INFO] ------------------< com.example:taskmanager-backend >-------------------
+[INFO] Building taskmanager-backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.3:run (default-cli) > test-compile @ taskmanager-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ taskmanager-backend ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ taskmanager-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ taskmanager-backend ---
+[INFO] skip non existing resourceDirectory /Users/vinaykumar.biyani/developer/AICORE/task-manager/backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ taskmanager-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.0.3:run (default-cli) < test-compile @ taskmanager-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.3:run (default-cli) @ taskmanager-backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-06T16:28:11.427+01:00  INFO 5771 --- [taskmanager-backend] [           main] c.e.t.TaskmanagerBackendApplication      : Starting TaskmanagerBackendApplication using Java 17.0.14 with PID 5771 (/Users/vinaykumar.biyani/developer/AICORE/task-manager/backend/target/classes started by vinaykumar.biyani in /Users/vinaykumar.biyani/developer/AICORE/task-manager/backend)
+2026-03-06T16:28:11.429+01:00  INFO 5771 --- [taskmanager-backend] [           main] c.e.t.TaskmanagerBackendApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-03-06T16:28:11.646+01:00  INFO 5771 --- [taskmanager-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-06T16:28:11.669+01:00  INFO 5771 --- [taskmanager-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2026-03-06T16:28:11.826+01:00  INFO 5771 --- [taskmanager-backend] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-06T16:28:11.831+01:00  INFO 5771 --- [taskmanager-backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-06T16:28:11.831+01:00  INFO 5771 --- [taskmanager-backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-06T16:28:11.864+01:00  INFO 5771 --- [taskmanager-backend] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 421 ms
+2026-03-06T16:28:11.924+01:00  INFO 5771 --- [taskmanager-backend] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-06T16:28:11.948+01:00  INFO 5771 --- [taskmanager-backend] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-06T16:28:12.117+01:00  INFO 5771 --- [taskmanager-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-06T16:28:12.131+01:00  INFO 5771 --- [taskmanager-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-06T16:28:12.201+01:00  INFO 5771 --- [taskmanager-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:taskdb user=SA
+2026-03-06T16:28:12.201+01:00  INFO 5771 --- [taskmanager-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-06T16:28:12.211+01:00  WARN 5771 --- [taskmanager-backend] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-06T16:28:12.219+01:00  INFO 5771 --- [taskmanager-backend] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:taskdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TASKDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-06T16:28:12.530+01:00  INFO 5771 --- [taskmanager-backend] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-06T16:28:12.553+01:00  INFO 5771 --- [taskmanager-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-06T16:28:12.583+01:00  INFO 5771 --- [taskmanager-backend] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-06T16:28:12.627+01:00  WARN 5771 --- [taskmanager-backend] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-06T16:28:12.725+01:00  INFO 5771 --- [taskmanager-backend] [           main] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:taskdb'
+2026-03-06T16:28:12.763+01:00  INFO 5771 --- [taskmanager-backend] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-03-06T16:28:12.766+01:00  INFO 5771 --- [taskmanager-backend] [           main] c.e.t.TaskmanagerBackendApplication      : Started TaskmanagerBackendApplication in 1.471 seconds (process running for 1.63)
+2026-03-06T16:28:31.542+01:00  INFO 5771 --- [taskmanager-backend] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-06T16:28:31.542+01:00  INFO 5771 --- [taskmanager-backend] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-06T16:28:31.543+01:00  INFO 5771 --- [taskmanager-backend] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
