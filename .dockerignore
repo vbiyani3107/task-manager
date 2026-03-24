@@ -1,0 +1,7 @@
+**/node_modules
+**/target
+**/venv
+**/.git
+**/.DS_Store
+**/dist
+**/*.log
