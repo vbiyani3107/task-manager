@@ -224,7 +224,7 @@ npm install
 npm run dev
 ```
 
-The frontend will start on **http://localhost:5174** (Vite dev server). It calls the backend at `http://localhost:8081` directly.
+The frontend will start on **http://localhost:5173** (Vite dev server). It calls the backend at `http://localhost:8081` directly.
 
 #### 3. Build the Frontend for Production
 
@@ -355,7 +355,7 @@ The project includes unit tests for the **backend service layer** using JUnit 5 
 | Test File | Class Under Test | Tests |
 |-----------|-----------------|-------|
 | `TaskServiceTest.java` | `TaskService` | 6 tests |
-| `TaskmanagerBackendApplicationTests.java` | Application Context | 1 test |
+| `TaskControllerTest.java` | `TaskController` | 8 tests |
 
 ### Tests Covered
 
@@ -393,9 +393,9 @@ cd backend
 |------|----------|-------|
 | **TaskService** | ✅ All methods covered | `getAllTasks`, `getTaskById`, `createTask`, `updateTask`, `deleteTask` |
 | **Exception Handling** | ✅ Covered | `ResourceNotFoundException` thrown when task not found |
-| **TaskController** | ❌ Not yet covered | Consider adding `@WebMvcTest`-based controller tests |
+| **TaskController** | ✅ Fully covered | `@WebMvcTest`-based controller test spanning CRUD + Bean validations |
 | **TaskRepository** | ⚪ N/A | Uses Spring Data JPA auto-generated implementation |
-| **Frontend** | ❌ Not yet covered | Consider adding React Testing Library / Vitest |
+| **Frontend** | ✅ Fully covered | Comprehensive component integration coverage via Vitest and React Testing Library |
 
 ### Testing Approach
 
@@ -414,15 +414,15 @@ cd backend
 |----------|-------|---------|
 | `server.port` | `8081` | Backend API port |
 | `spring.datasource.url` | `jdbc:h2:mem:taskdb` | H2 in-memory database URL |
-| `spring.jpa.hibernate.ddl-auto` | `update` | Auto-create/update schema |
+| `spring.jpa.hibernate.ddl-auto` | `create-drop` | Auto-create/drop schema (prevents caching) |
 | `spring.h2.console.enabled` | `true` | Enable H2 web console |
 | `spring.h2.console.path` | `/h2-console` | H2 console URL path |
 
 ### CORS Configuration
 
 The backend allows cross-origin requests from:
-- `http://localhost:5174` (Vite dev server)
-- `http://192.168.1.43:5174` (local network access)
+- `http://localhost:5173` (Vite dev server)
+- `http://localhost:3000` (Docker Nginx port)
 
 Methods allowed: `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`
 

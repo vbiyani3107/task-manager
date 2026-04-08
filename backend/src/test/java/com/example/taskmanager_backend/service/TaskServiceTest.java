@@ -48,6 +48,10 @@ public class TaskServiceTest {
         List<Task> tasks = taskService.getAllTasks();
 
         assertEquals(2, tasks.size());
+        assertEquals("Test Task 1", tasks.get(0).getTitle());
+        assertEquals(TaskStatus.TODO, tasks.get(0).getStatus());
+        assertEquals("Test Task 2", tasks.get(1).getTitle());
+        assertEquals(TaskStatus.IN_PROGRESS, tasks.get(1).getStatus());
         verify(taskRepository, times(1)).findAll();
     }
 
@@ -76,6 +80,9 @@ public class TaskServiceTest {
 
         assertNotNull(created);
         assertEquals(1L, created.getId());
+        assertEquals("Test Task 1", created.getTitle());
+        assertEquals("Description 1", created.getDescription());
+        assertEquals(TaskStatus.TODO, created.getStatus());
         verify(taskRepository, times(1)).save(task1);
     }
 

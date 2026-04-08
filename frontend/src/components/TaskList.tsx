@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Task, TaskStatus } from '../types/task';
-import { CheckCircle2, Circle, Clock, MoreVertical, Edit2, Trash2, Calendar } from 'lucide-react';
+import { CheckCircle2, Circle, Clock, Edit2, Trash2, Calendar } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
 
 interface TaskListProps {
